@@ -44,7 +44,12 @@
             </main>
             <hr>
             <div id="email">
-                <h2>markskinner850@gmail.com</h2>
+                <div class="tooltip">
+                    <button class="btn" onclick="copyEmail()" onmouseout="outFunc()">
+                        <span id="myTooltip" class="tooltiptext">Copy to clipboard</span>
+                        markskinner850@gmail.com
+                    </button>
+                </div>
             </div>
             <footer id="footer">
                 <a href="https://github.com/MarkFSkinner" target="_blank"><i class="fab fa-github"></i></a>

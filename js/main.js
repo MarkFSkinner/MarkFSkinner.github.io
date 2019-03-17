@@ -28,6 +28,26 @@ function addProjects(arr) {
     });
 }
 
+function updateClipboard(newClip) {
+    navigator.clipboard.writeText(newClip).then(() => {
+        /* clipboard successfully set */
+        let tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied!";
+    }, () => {
+        /* clipboard write failed */
+        alert("Failed to copy to clipboard");
+    });
+}
+
+function copyEmail() {
+    updateClipboard("markskinner850@gmail.com");
+}
+
+function outFunc() {
+    let tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+}
+
 $(function() {
     addProjects(projects);
 
