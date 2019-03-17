@@ -163,8 +163,8 @@ h1 {
 }
 
 #footer a {
-    padding-right: 0.9375rem; /*15px*/
-    padding-left: 0.9375rem; /*15px*/
+    margin-right: 0.9375rem; /*15px*/
+    margin-left: 0.9375rem; /*15px*/
     /*text-decoration: none;*/
 }
 
