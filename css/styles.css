@@ -1,0 +1,239 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#container {
+    width: 100%;
+}
+
+#header {
+    /*display: inline-block;*/
+    background-color: #1E392A;
+    width: 100%;
+    height: 6.563rem; /*105px*/
+    top: 0rem;
+    left: 0rem;
+    position: fixed;
+    /*overflow: visible;*/
+}
+
+#logo {
+    display: inline-block;
+    width: 30%;
+    height: 6.563rem; /*105px*/
+    overflow: hidden;
+}
+
+.logo-link {
+    font-size: 1.875rem; /*30px*/
+    text-decoration: none;
+    /*margin-top: 5rem;*/ /*80px*/
+    margin-left: 1.875rem; /*30px*/
+    line-height: 6.563rem;
+    /*overflow: visible;
+    width: 100%;*/
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    height: 6.563rem; /*105px*/
+    transition: height 0.5s;
+    float: right;
+}
+
+.nav-link {
+    font-size: 1.875rem; /*30px*/
+    text-decoration: none;
+    text-align: right;
+    margin-left: 1.875rem; /*30px*/
+    margin-right: 0.625rem; /*10px*/
+    padding-right: 1.25rem; /*20px*/
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.logo-link, .logo-link:visited, .nav-link, .nav-link:visited {
+    color: white;
+}
+
+a, a:visited {
+    color: black;
+}
+
+#top-line {
+    margin-top: 5rem; /*80px*/
+}
+
+.hidden {
+    display: none;
+}
+
+/*Adjust anchor links for fixed header*/
+:target:before {
+    content: "";
+    display: block;
+    height: 6.563rem; /*105px*/
+    margin: -6.563rem 0 0; /*105px 0 0*/
+}
+
+.top-nav .icon {
+    display: none;
+    font-size: 2.5rem; /*40px*/
+    color: white;
+}
+
+#main {
+    text-align: center;
+    width: 100%;
+    margin-top: 8.438rem; /*135px*/
+}
+
+hr {
+    color: hsl(0, 0%, 32%);
+    width: 85%;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+#photo-container {
+    width: 100%;
+}
+
+#my-photo {
+    max-width: 15.63rem; /*250px*/
+    width: 100%;
+    /*margin-right: 0.5rem;
+    margin-top: 0.5rem;*/
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+#info {
+    /*width: 100%;*/
+    height: 100%;
+}
+
+#info-text {
+    /*display: inline-block;*/
+    width: 75%;
+    /*vertical-align: top;*/
+    margin: auto;
+}
+
+.project {
+    display: block;
+    width: 75%;
+    min-height: 15rem; /*240px*/
+    margin: auto;
+    padding-bottom: 2.5rem; /*40px*/
+    margin-top: 1.563rem; /*25px*/
+    padding-top: 0.3125rem; /*5px*/
+    padding-left: 0.3125rem; /*5px*/
+    padding-right: 0.3125rem; /*5px*/
+}
+
+.project:hover {
+    background-color: #828081;
+    background-size: 50%;
+    color: white;
+}
+
+.project img {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*align-items: center;*/
+    padding-top: 2.5rem; /*40px*/
+    padding-bottom: 2.5rem; /*40px*/
+}
+
+#footer a {
+    padding-right: 0.9375rem; /*15px*/
+    padding-left: 0.9375rem; /*15px*/
+    /*text-decoration: none;*/
+}
+
+#email {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+i {
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 824px) {
+    .project {
+        display: inline-block;
+        vertical-align: top;
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 823px) {
+    .top-nav a {
+        display: none;
+        font-size: 1.875rem; /*30px*/
+        padding-right: 1.875rem; /*30px*/
+    }
+
+    .top-nav a.icon {
+        display: block;
+        float: right;
+        margin: 1.063rem 0.3125rem 1.25rem; /*17px 5px 20px*/
+    }
+
+    .nav-link {
+        float: left;
+        margin: 0.625rem 0.3125rem 0.625rem 0.3125rem; /*10px 5px 10px 5px*/
+        padding: 0.3125rem 1.25rem 0.3125rem; /*5px 20px 5px*/
+    }
+
+    .top-link {
+        margin-top: 1.25rem; /*20px*/
+    }
+
+    #logo {
+        width: 50%;
+    }
+
+    #nav-bar {
+        width: 50%;
+    }
+
+    .top-nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: hsl(0, 0%, 90%);
+    }
+
+    .top-nav.responsive a {
+        display: block;
+        float: none;
+        text-align: right;
+        color: hsl(0, 0%, 90%);
+    }
+
+    #nav-bar.responsive {
+        display: inline-block;
+        background-color: #828081;
+        height: 75rem; /*1200px*/
+    }
+}
