@@ -22,9 +22,9 @@ const projects = [
 
 function addProjects(arr) {
     arr.forEach(item => {
-        $('#portfolio').append("<div class='project'><a href='" + item.link
-            + "' target='_blank'><img src='" + item.image
-            + "' alt='" + item.name + "'></a><h3>" +item.name + "</h3></div>");
+        $('#portfolio').append("<div class='project-container'><a href='" + item.link
+            + "' target='_blank'><div class='project'><img src='" + item.image
+            + "' alt='" + item.name + "'><h3>" +item.name + "</h3></div></a></div>");
     });
 }
 
