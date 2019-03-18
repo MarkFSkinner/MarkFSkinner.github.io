@@ -48,8 +48,22 @@ function outFunc() {
     tooltip.innerHTML = "Copy to clipboard";
 }
 
+function setActiveLink() {
+    let navBar = document.getElementById("nav-bar");
+    let navLinks = navBar.getElementsByClassName("nav-link");
+    for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener("click", function() {
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+}
+
 $(function() {
     addProjects(projects);
+
+    setActiveLink();
 
     $(".nav-link").on('click', function() {
         $("#nav-bar").removeClass("responsive");

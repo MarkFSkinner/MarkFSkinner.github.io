@@ -1,11 +1,11 @@
-$primary-color: #1E392A;
-$secondary-color: #828081;
-$complementary-color: #3CC47C;
-$nav-height: 6.563rem; //105px
+$primary-color: #078898; //#1E392A
+$secondary-color: #EEAA7B; //#E37222 //#828081
+$complementary-color: #66B9BF; //#3CC47C
+$nav-height: 5rem; //105px
 $project-height: 15rem; //240px
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -32,13 +32,14 @@ body {
 }
 
 .logo-link {
-    font-size: 1.875rem; //30px
+    font-size: 1.5rem; //30px
     text-decoration: none;
     //margin-top: 5rem; //80px
     margin-left: 1.875rem; //30px
     line-height: $nav-height;
     //overflow: visible;
     //width: 100%;
+    letter-spacing: 2px;
 }
 
 #nav-bar {
@@ -53,20 +54,26 @@ body {
 }
 
 .nav-link {
-    font-size: 1.875rem; //30px
+    font-size: 1.25rem; //30px
     text-decoration: none;
     text-align: right;
     margin-left: 1.875rem; //30px
     margin-right: 0.625rem; //10px
     padding-right: 1.25rem; //20px
+    letter-spacing: 2px;
 }
 
-.nav-link:hover {
-    text-decoration: underline;
+.nav-link:hover, .nav-link:visited:hover {
+    //text-decoration: underline;
+    color: $secondary-color;
 }
 
 .logo-link, .logo-link:visited, .nav-link, .nav-link:visited {
     color: white;
+}
+
+.active, .active:visited {
+    color: $secondary-color;
 }
 
 a, a:visited {
@@ -274,7 +281,7 @@ i {
 @media screen and (max-width: 823px) {
     .top-nav a {
         display: none;
-        font-size: 1.875rem; //30px
+        //font-size: 1.875rem; //30px
         padding-right: 1.875rem; //30px
     }
 
@@ -318,7 +325,7 @@ i {
 
     #nav-bar.responsive {
         display: inline-block;
-        background-color: $secondary-color;
+        background-color: $complementary-color;
         height: 75rem; //1200px
     }
 }
