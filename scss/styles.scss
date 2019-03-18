@@ -1,6 +1,7 @@
 $primary-color: #078898; //#1E392A
-$secondary-color: #EEAA7B; //#E37222 //#828081
-$complementary-color: #66B9BF; //#3CC47C
+$secondary-color: #66B9BF; //#3CC47C
+$complementary-color: #EEAA7B; //#E37222 //#828081
+$accent-color: #E37222;
 $nav-height: 5rem; //105px
 $project-height: 15rem; //240px
 
@@ -39,7 +40,7 @@ body {
     line-height: $nav-height;
     //overflow: visible;
     //width: 100%;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem; //2px
 }
 
 #nav-bar {
@@ -60,12 +61,12 @@ body {
     margin-left: 1.875rem; //30px
     margin-right: 0.625rem; //10px
     padding-right: 1.25rem; //20px
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem; //2px
 }
 
 .nav-link:hover, .nav-link:visited:hover {
     //text-decoration: underline;
-    color: $secondary-color;
+    color: $complementary-color;
 }
 
 .logo-link, .logo-link:visited, .nav-link, .nav-link:visited {
@@ -73,7 +74,7 @@ body {
 }
 
 .active, .active:visited {
-    color: $secondary-color;
+    color: $complementary-color;
 }
 
 a, a:visited {
@@ -81,7 +82,7 @@ a, a:visited {
 }
 
 #top-line {
-    margin-top: 5rem; //80px
+    margin-top: 3.375rem; //54px
 }
 
 .hidden {
@@ -161,7 +162,7 @@ h1 {
 }
 
 .project-container:hover {
-    background-color: $secondary-color;
+    background-color: $complementary-color;
     background-size: 50%;
     //color: white;
 }
@@ -190,7 +191,7 @@ h1 {
 }
 
 .btn {
-    background-color: $complementary-color;
+    background-color: $secondary-color;
     border: none;
     color: white;
     padding: 0.9375rem 1rem; //15px 16px
@@ -288,7 +289,7 @@ i {
     .top-nav a.icon {
         display: block;
         float: right;
-        margin: 1.063rem 0.3125rem 1.25rem; //17px 5px 20px
+        //margin: 1.063rem 0.3125rem 1.25rem; //17px 5px 20px
     }
 
     .nav-link {
@@ -298,7 +299,7 @@ i {
     }
 
     .top-link {
-        margin-top: 1.25rem; //20px
+        //margin-top: 1.25rem; //20px
     }
 
     #logo {
@@ -311,21 +312,25 @@ i {
 
     .top-nav.responsive .icon {
         position: absolute;
-        right: 0;
-        top: 0;
-        color: hsl(0, 0%, 90%);
+        right: 0.125rem; //2px
+        top: 0.625rem; //10px
+        color: white;
     }
 
     .top-nav.responsive a {
         display: block;
         float: none;
         text-align: right;
-        color: hsl(0, 0%, 90%);
+        color: white;
+    }
+
+    .top-nav.responsive a:hover {
+        color: $accent-color;
     }
 
     #nav-bar.responsive {
         display: inline-block;
-        background-color: $complementary-color;
+        background-color: $secondary-color;
         height: 75rem; //1200px
     }
 }
