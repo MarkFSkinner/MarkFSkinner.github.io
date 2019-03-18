@@ -146,11 +146,15 @@ h1 {
 .project-container:hover {
     background-color: #828081;
     background-size: 50%;
-    color: white;
+    /*color: white;*/
 }
 
 .project-container a {
     text-decoration: none;
+}
+
+.project-container:hover a{
+    color: white;
 }
 
 .project {
