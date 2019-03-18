@@ -135,9 +135,11 @@ h1 {
   background-color: #3CC47C;
   border: none;
   color: white;
-  padding: 0.9375rem 2rem;
+  padding: 0.9375rem 1rem;
   text-decoration: none;
-  font-size: 1rem; }
+  font-size: 0.75rem;
+  max-width: 100%;
+  overflow: hidden; }
 
 .btn:hover {
   background-color: #1E392A;
@@ -145,7 +147,8 @@ h1 {
 
 .tooltip {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  max-width: 100%; }
 
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -195,7 +198,11 @@ i {
   .project-container {
     display: inline-block;
     vertical-align: top;
-    width: 23%; } }
+    width: 23%; }
+
+  .btn {
+    padding: 0.9375rem 2rem;
+    font-size: 1rem; } }
 @media screen and (max-width: 823px) {
   .top-nav a {
     display: none;

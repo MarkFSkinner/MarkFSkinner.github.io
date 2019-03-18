@@ -182,10 +182,12 @@ h1 {
     background-color: $complementary-color;
     border: none;
     color: white;
-    padding: 0.9375rem 2rem; //15px 32px
+    padding: 0.9375rem 1rem; //15px 16px
     //text-align: center;*/
     text-decoration: none;
-    font-size: 1rem; //16px
+    font-size: 0.75rem; //12px
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .btn:hover {
@@ -196,6 +198,7 @@ h1 {
 .tooltip {
     position: relative;
     display: inline-block;
+    max-width: 100%;
 }
 
 .tooltip .tooltiptext {
@@ -256,6 +259,12 @@ i {
         vertical-align: top;
         width: 23%;
     }
+
+    .btn {
+        padding: 0.9375rem 2rem; //15px 32px
+        font-size: 1rem; //16px
+    }
+
 }
 
 @media screen and (max-width: 823px) {
