@@ -4,14 +4,23 @@ $complementary-color: #EEAA7B; //#E37222 //#828081
 $accent-color: #E37222;
 $nav-height: 5rem; //105px
 $project-height: 15rem; //240px
+$plain-text-color: #3a4145; //#111111;
 
 body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    color: $plain-text-color;
 }
 
+
 #container {
-    width: 100%;
+    width: 100vw;
+    margin-top: -2.5rem; //-40px
+    //margin-left: -0.625rem; //10px
+    //margin-right: -0.625rem; //10px
+    //position: absolute;
 }
 
 #header {
@@ -78,7 +87,7 @@ body {
 }
 
 a, a:visited {
-    color: black;
+    color: $plain-text-color;
 }
 
 #top-line {
@@ -106,16 +115,42 @@ a, a:visited {
 #main {
     text-align: center;
     width: 100%;
-    margin-top: 8.438rem; //135px
+    margin-top: 7.5rem; //120px
+}
+
+section {
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+#intro {
+    background-color: #f5f8fa;
+    //margin-left: -0.625rem; //10px
+    //margin-right: -0.625rem; //10px
+    padding-top: 3.75rem; //60px
+    padding-bottom: 1.5625rem; //25px
+}
+
+#intro h1 {
+    margin-bottom: -1.25rem; //-20px
+    margin-top: 1rem; //16px
+    font-size: 2.75rem; //44px
 }
 
 hr {
-    color: hsl(0, 0%, 32%);
-    width: 85%;
+    color: hsl(0, 0%, 85%);
+    width: 100%;
+    margin-top: -0.125rem; //-2px
+    margin-bottom: 3.125rem; //50px
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.125rem; //2px
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 500;
 }
 
 #photo-container {
@@ -137,6 +172,8 @@ h1 {
     -o-box-shadow: 0px 5px 4px rgba(0,0,0,0.3);
 }
 
+
+
 #info {
     //width: 100%;
     height: 100%;
@@ -147,6 +184,17 @@ h1 {
     width: 75%;
     //vertical-align: top;
     margin: auto;
+    margin-bottom: 3.125rem; //50px
+}
+
+.highlight {
+    color: $accent-color;
+}
+
+#portfolio {
+    background-color: #f5f8fa;
+    //margin-top: -1.66rem; //-26.56px
+    padding-top: 0.3125rem; //5px
 }
 
 .project-container {
@@ -181,13 +229,15 @@ h1 {
 }
 
 .project img {
-    width: 100%;
+    width: 90%;
+    padding-top: 0.625rem; //10px
 }
 
 #email {
     width: 100%;
     display: block;
     text-align: center;
+    margin-top: 3.125rem; //50px
 }
 
 .btn {

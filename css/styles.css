@@ -1,9 +1,13 @@
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  line-height: 1.6; }
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  color: #3a4145; }
 
 #container {
-  width: 100%; }
+  width: 100vw;
+  margin-top: -2.5rem; }
 
 #header {
   background-color: #078898;
@@ -55,7 +59,7 @@ body {
   color: #EEAA7B; }
 
 a, a:visited {
-  color: black; }
+  color: #3a4145; }
 
 #top-line {
   margin-top: 3.375rem; }
@@ -78,14 +82,34 @@ a, a:visited {
 #main {
   text-align: center;
   width: 100%;
-  margin-top: 8.438rem; }
+  margin-top: 7.5rem; }
+
+section {
+  border-bottom: 1px solid #e6e6e6; }
+
+#intro {
+  background-color: #f5f8fa;
+  padding-top: 3.75rem;
+  padding-bottom: 1.5625rem; }
+
+#intro h1 {
+  margin-bottom: -1.25rem;
+  margin-top: 1rem;
+  font-size: 2.75rem; }
 
 hr {
-  color: #525252;
-  width: 85%; }
+  color: #d9d9d9;
+  width: 100%;
+  margin-top: -0.125rem;
+  margin-bottom: 3.125rem; }
 
 h1 {
-  font-size: 2.5rem; }
+  font-size: 2rem;
+  letter-spacing: 0.125rem;
+  font-weight: 500; }
+
+h3 {
+  font-weight: 500; }
 
 #photo-container {
   width: 100%; }
@@ -106,7 +130,15 @@ h1 {
 
 #info-text {
   width: 75%;
-  margin: auto; }
+  margin: auto;
+  margin-bottom: 3.125rem; }
+
+.highlight {
+  color: #E37222; }
+
+#portfolio {
+  background-color: #f5f8fa;
+  padding-top: 0.3125rem; }
 
 .project-container {
   display: block;
@@ -133,12 +165,14 @@ h1 {
   min-height: 15rem; }
 
 .project img {
-  width: 100%; }
+  width: 90%;
+  padding-top: 0.625rem; }
 
 #email {
   width: 100%;
   display: block;
-  text-align: center; }
+  text-align: center;
+  margin-top: 3.125rem; }
 
 .btn {
   background-color: #66B9BF;
