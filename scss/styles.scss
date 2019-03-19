@@ -2,7 +2,7 @@ $primary-color: #078898; //#1E392A
 $secondary-color: #66B9BF; //#3CC47C
 $complementary-color: #EEAA7B; //#E37222 //#828081
 $accent-color: #E37222;
-$nav-height: 5rem; //105px
+$nav-height: 4rem; //64px
 $project-height: 15rem; //240px
 $plain-text-color: #3a4145; //#111111;
 
@@ -17,7 +17,7 @@ body {
 
 #container {
     width: 100vw;
-    margin-top: -2.5rem; //-40px
+    //margin-top: -2.5rem; //-40px
     //margin-left: -0.625rem; //10px
     //margin-right: -0.625rem; //10px
     //position: absolute;
@@ -91,7 +91,7 @@ a, a:visited {
 }
 
 #top-line {
-    margin-top: 3.375rem; //54px
+    margin-top: 2.35rem; //37.6px
 }
 
 .hidden {
@@ -99,12 +99,12 @@ a, a:visited {
 }
 
 /*Adjust anchor links for fixed header*/
-:target:before {
+/*:target:before {
     content: "";
     display: block;
     height: $nav-height;
     margin: -$nav-height 0 0;
-}
+}*/
 
 .top-nav .icon {
     display: none;
@@ -115,11 +115,14 @@ a, a:visited {
 #main {
     text-align: center;
     width: 100%;
-    margin-top: 7.5rem; //120px
+    margin-top: $nav-height;
 }
 
 section {
     border-bottom: 1px solid hsl(0, 0%, 90%);
+    //vertical-align: top;
+    padding-top: 2.75rem; //-44px
+    padding-bottom: 2.75rem;
 }
 
 #intro {
@@ -127,7 +130,7 @@ section {
     //margin-left: -0.625rem; //10px
     //margin-right: -0.625rem; //10px
     padding-top: 3.75rem; //60px
-    padding-bottom: 1.5625rem; //25px
+    //padding-bottom: 1.5625rem; //25px
 }
 
 #intro h1 {
@@ -139,14 +142,19 @@ section {
 hr {
     color: hsl(0, 0%, 85%);
     width: 100%;
-    margin-top: -0.125rem; //-2px
-    margin-bottom: 3.125rem; //50px
+    //margin-top: -0.125rem; //-2px
+    //margin-bottom: 3.125rem; //50px
 }
 
 h1 {
-    font-size: 2rem;
     letter-spacing: 0.125rem; //2px
     font-weight: 500;
+}
+
+.sub-heading {
+    font-size: 2rem;
+    margin-top: 0rem;
+    padding-top: 1.66rem; //-26.56px
 }
 
 h3 {
@@ -184,7 +192,7 @@ h3 {
     width: 75%;
     //vertical-align: top;
     margin: auto;
-    margin-bottom: 3.125rem; //50px
+    //margin-bottom: 3.125rem; //50px
 }
 
 .highlight {
@@ -194,7 +202,8 @@ h3 {
 #portfolio {
     background-color: #f5f8fa;
     //margin-top: -1.66rem; //-26.56px
-    padding-top: 0.3125rem; //5px
+    //padding-top: 2rem; //-32px
+    //overflow: hidden;
 }
 
 .project-container {
@@ -363,7 +372,7 @@ i {
     .top-nav.responsive .icon {
         position: absolute;
         right: 0.125rem; //2px
-        top: 0.625rem; //10px
+        //top: 0.625rem; //10px
         color: white;
     }
 
