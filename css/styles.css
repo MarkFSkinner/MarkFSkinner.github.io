@@ -6,7 +6,7 @@ body {
   color: #3a4145; }
 
 #container {
-  width: 100vw; }
+  width: 100%; }
 
 #header {
   background-color: #078898;
