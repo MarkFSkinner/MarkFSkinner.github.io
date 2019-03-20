@@ -40,12 +40,11 @@ body {
   float: right; }
 
 .nav-link {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   text-decoration: none;
   text-align: right;
-  margin-left: 1.875rem;
-  margin-right: 0.625rem;
-  padding-right: 1.25rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   letter-spacing: 0.125rem; }
 
 .nav-link:hover, .nav-link:visited:hover {
@@ -258,7 +257,8 @@ i {
   .nav-link {
     float: left;
     margin: 0.625rem 0.3125rem 0.625rem 0.3125rem;
-    padding: 0.3125rem 1.25rem 0.3125rem; }
+    padding: 0.3125rem 1.25rem 0.3125rem;
+    font-size: 1.25rem; }
 
   #logo {
     width: 50%; }

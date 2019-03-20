@@ -64,12 +64,12 @@ body {
 }
 
 .nav-link {
-    font-size: 1.25rem; //30px
+    font-size: 1.05rem; //16.8px
     text-decoration: none;
     text-align: right;
-    margin-left: 1.875rem; //30px
-    margin-right: 0.625rem; //10px
-    padding-right: 1.25rem; //20px
+    margin-left: 1.5rem; //24px
+    margin-right: 1.5rem; //24px
+    //padding-right: 1.25rem; //20px
     letter-spacing: 0.125rem; //2px
 }
 
@@ -355,6 +355,7 @@ i {
         float: left;
         margin: 0.625rem 0.3125rem 0.625rem 0.3125rem; //10px 5px 10px 5px
         padding: 0.3125rem 1.25rem 0.3125rem; //5px 20px 5px
+        font-size: 1.25rem; //20px
     }
 
     .top-link {
