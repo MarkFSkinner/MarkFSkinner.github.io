@@ -30,17 +30,18 @@ function addProjects(arr) {
 
 function updateClipboard(newClip) {
     navigator.clipboard.writeText(newClip).then(() => {
-        /* clipboard successfully set */
+        //clipboard successfully set
         const tooltip = document.getElementById("myTooltip");
         tooltip.innerHTML = "Copied!";
     }, () => {
-        /* clipboard copy failed */
+        //clipboard copy failed
         alert("Failed to copy to clipboard");
     });
 }
 
 function copyEmail() {
-    updateClipboard("markskinner850@gmail.com");
+    let emailText = $('#email-text').text();
+    updateClipboard(emailText);
 }
 
 function outFunc() {
@@ -122,12 +123,7 @@ $(window).resize(function () {
     }
 });
 
-//Run on page load
-$(function() {
-    addProjects(projects);
-    setActiveClickLink();
-    setActiveScrollLink();
-
+function closeMenuOnClick() {
     $(".nav-link").on('click', function() {
         $("#nav-bar").removeClass("responsive");
         $("#container").css("width", "100%");
@@ -135,4 +131,12 @@ $(function() {
         $(".fas").removeClass("fa-times");
         $(".fas").addClass("fa-bars");
     });
+}
+
+//Run on page load
+$(function() {
+    addProjects(projects);
+    setActiveClickLink();
+    setActiveScrollLink();
+    closeMenuOnClick();
 })
