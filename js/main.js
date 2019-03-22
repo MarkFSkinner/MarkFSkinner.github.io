@@ -31,10 +31,10 @@ function addProjects(arr) {
 function updateClipboard(newClip) {
     navigator.clipboard.writeText(newClip).then(() => {
         /* clipboard successfully set */
-        let tooltip = document.getElementById("myTooltip");
+        const tooltip = document.getElementById("myTooltip");
         tooltip.innerHTML = "Copied!";
     }, () => {
-        /* clipboard write failed */
+        /* clipboard copy failed */
         alert("Failed to copy to clipboard");
     });
 }
@@ -44,13 +44,12 @@ function copyEmail() {
 }
 
 function outFunc() {
-    let tooltip = document.getElementById("myTooltip");
+    const tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copy to clipboard";
 }
 
-function setActiveLink() {
-    let navBar = document.getElementById("nav-bar");
-    let navLinks = navBar.getElementsByClassName("nav-link");
+function setActiveClickLink() {
+    const navLinks = document.getElementsByClassName("nav-link");
     for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].addEventListener("click", function() {
             let current = document.getElementsByClassName("active");
@@ -60,19 +59,42 @@ function setActiveLink() {
     }
 }
 
-$(function() {
-    addProjects(projects);
-
-    setActiveLink();
-
-    $(".nav-link").on('click', function() {
-        $("#nav-bar").removeClass("responsive");
-        $("#container").css("width", "100%");
-        $(".line").addClass("hidden");
-        $(".fas").removeClass("fa-times");
-        $(".fas").addClass("fa-bars");
+function setActiveScrollLink() {
+    const navLinks = document.getElementsByClassName('nav-link');
+    const hrefs = $.map(navLinks, (elem) => {
+        let result = elem.href.slice(elem.href.indexOf('#'));
+        if (result.length === 1) {
+            return result + 'intro';
+        }
+        return result;
     });
-})
+    const sections = $.grep(hrefs, (elem) => {
+        return elem.indexOf('#') !== -1;
+    });
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop() + 1;
+        let scrollBottom = $(window).scrollTop() + $(window).height();
+        let lastOffset = $(sections[sections.length - 1]).offset().top;
+        for (let i = 0; i < sections.length; i++) {
+            let currentOffset = $(sections[i]).offset().top;
+            if (currentOffset > scroll) {
+                break;
+            }
+            let nextOffset = $(sections[i + 1]).offset().top;
+            let currentLink = document.getElementsByClassName("active");
+            if (scrollBottom > lastOffset) {
+                currentLink[0].className = currentLink[0].className.replace(" active", "");
+                $(sections[sections.length - 1] + '-link').addClass("active");
+                break;
+            }
+            else if (scroll >= currentOffset && scroll < nextOffset) {
+                currentLink[0].className = currentLink[0].className.replace(" active", "");
+                $(sections[i] + '-link').addClass("active");
+                break;
+            }
+        }
+    });
+}
 
 function toggleMenu() {
     $("#nav-bar").toggleClass("responsive");
@@ -90,7 +112,7 @@ function toggleMenu() {
 }
 
 $(window).resize(function () {
-    var viewportWidth = $(window).width();
+    let viewportWidth = $(window).width();
     if (viewportWidth > 786) {
         $("#nav-bar").removeClass("responsive");
         $("#container").css("width", "100%");
@@ -99,3 +121,18 @@ $(window).resize(function () {
         $(".fas").addClass("fa-bars");
     }
 });
+
+//Run on page load
+$(function() {
+    addProjects(projects);
+    setActiveClickLink();
+    setActiveScrollLink();
+
+    $(".nav-link").on('click', function() {
+        $("#nav-bar").removeClass("responsive");
+        $("#container").css("width", "100%");
+        $(".line").addClass("hidden");
+        $(".fas").removeClass("fa-times");
+        $(".fas").addClass("fa-bars");
+    });
+})
