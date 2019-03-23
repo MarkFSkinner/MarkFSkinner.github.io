@@ -139,6 +139,12 @@ h3 {
 #portfolio {
   background-color: #f5f8fa; }
 
+#categories {
+  padding-bottom: 1.25rem; }
+
+.category {
+  margin-bottom: 1rem; }
+
 .project-container {
   display: block;
   width: 75%;
@@ -186,6 +192,9 @@ h3 {
 .btn:hover {
   background-color: #078898;
   cursor: pointer; }
+
+.btn.active {
+  background-color: #078898; }
 
 .tooltip {
   position: relative;

@@ -206,6 +206,14 @@ h3 {
     //overflow: hidden;
 }
 
+#categories {
+    padding-bottom: 1.25rem; //20px
+}
+
+.category {
+    margin-bottom: 1rem; //16px
+}
+
 .project-container {
     display: block;
     width: 75%;
@@ -264,6 +272,10 @@ h3 {
 .btn:hover {
     background-color: $primary-color;
     cursor: pointer;
+}
+
+.btn.active {
+    background-color: $primary-color;
 }
 
 .tooltip {
