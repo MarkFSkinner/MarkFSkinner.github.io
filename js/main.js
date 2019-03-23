@@ -51,16 +51,11 @@ function outFunc() {
     tooltip.innerHTML = "Copy to clipboard";
 }
 
-function setActiveClickLink(parentId, target) {
-    const parent = document.getElementById(parentId);
-    const list = parent.getElementsByClassName(target);
-    for (let i = 0; i < list.length; i++) {
-        list[i].addEventListener("click", function() {
-            let current = parent.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-        });
-    }
+function setActiveClickLink(target) {
+    $('.' + target).click(function () {
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+    });
 }
 
 function setActiveScrollLink() {
@@ -151,9 +146,9 @@ function filterProjects() {
 //Run on page load
 $(function() {
     addProjects(projects);
-    setActiveClickLink("nav-bar", "nav-link");
+    setActiveClickLink("nav-link");
     setActiveScrollLink();
-    setActiveClickLink("categories", "category");
+    setActiveClickLink("category");
     closeMenuOnClick();
     filterProjects();
 })
