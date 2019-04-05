@@ -8,14 +8,14 @@ class Project {
 }
 
 const projects = [
-    new Project("Weather App", "https://weather-app-39e37.firebaseapp.com/", "images/coming-soon.jpg", ["apps", "react"]),
-    new Project("Markdown Previewer", "https://markdown-previewer-23554.firebaseapp.com/", "images/coming-soon.jpg", ["apps", "react"]),
+    new Project("Weather App", "https://weather-app-39e37.firebaseapp.com/", "images/weather-app.png", ["apps", "react"]),
+    new Project("Markdown Previewer", "https://markdown-previewer-23554.firebaseapp.com/", "images/markdown-previewer.png", ["apps", "react"]),
     new Project("Drum Machine", "#", "images/coming-soon.jpg", ["apps", "react"]),
     new Project("Random Quote Generator", "#", "images/coming-soon.jpg", ["apps"]),
     new Project("Calculator", "#", "images/coming-soon.jpg", ["apps"]),
     new Project("Pomodoro Clock", "#", "images/coming-soon.jpg", ["apps", "react"]),
     new Project("Wikipedia Searcher", "#", "images/coming-soon.jpg", ["apps"]),
-    new Project("Product Landing Page", "#", "images/coming-soon.jpg", ["sites"]),
+    new Project("Product Landing Page", "https://markfskinner.github.io/product-landing-page/#models", "images/product-landing-page.png", ["sites"]),
     new Project("Technical Documentation Page", "#", "images/coming-soon.jpg", ["sites"]),
     new Project("Tic Tac Toe", "#", "images/coming-soon.jpg", ["apps"]),
     new Project("Frogger", "#", "images/coming-soon.jpg", ["apps"])
