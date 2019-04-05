@@ -8,25 +8,25 @@ class Project {
 }
 
 const projects = [
-    new Project("Weather App", "#", "https://www.fillmurray.com/640/360", ["apps", "react"]),
-    new Project("Drum Machine", "#", "https://www.placecage.com/640/360", ["apps", "react"]),
-    new Project("Random Quote Generator", "#", "https://www.fillmurray.com/640/360", ["apps"]),
-    new Project("Calculator", "#", "https://www.placecage.com/640/360", ["apps"]),
-    new Project("Pomodoro Clock", "#", "https://www.fillmurray.com/640/360", ["apps", "react"]),
-    new Project("Wikipedia Searcher", "#", "https://www.placecage.com/640/360", ["apps"]),
-    new Project("Markdown Previewer", "#", "https://www.fillmurray.com/640/360", ["apps", "react"]),
-    new Project("Product Landing Page", "#", "https://www.placecage.com/640/360", ["sites"]),
-    new Project("Technical Documentation Page", "#", "https://www.fillmurray.com/640/360", ["sites"]),
-    new Project("Tic Tac Toe", "#", "https://www.placecage.com/640/360", ["apps"]),
-    new Project("Frogger", "#", "https://www.fillmurray.com/640/360", ["apps"])
+    new Project("Weather App", "https://weather-app-39e37.firebaseapp.com/", "images/coming-soon.jpg", ["apps", "react"]),
+    new Project("Markdown Previewer", "https://markdown-previewer-23554.firebaseapp.com/", "images/coming-soon.jpg", ["apps", "react"]),
+    new Project("Drum Machine", "#", "images/coming-soon.jpg", ["apps", "react"]),
+    new Project("Random Quote Generator", "#", "images/coming-soon.jpg", ["apps"]),
+    new Project("Calculator", "#", "images/coming-soon.jpg", ["apps"]),
+    new Project("Pomodoro Clock", "#", "images/coming-soon.jpg", ["apps", "react"]),
+    new Project("Wikipedia Searcher", "#", "images/coming-soon.jpg", ["apps"]),
+    new Project("Product Landing Page", "#", "images/coming-soon.jpg", ["sites"]),
+    new Project("Technical Documentation Page", "#", "images/coming-soon.jpg", ["sites"]),
+    new Project("Tic Tac Toe", "#", "images/coming-soon.jpg", ["apps"]),
+    new Project("Frogger", "#", "images/coming-soon.jpg", ["apps"])
 ];
 
 function addProjects(arr) {
     arr.forEach(item => {
         let classes = item.categories.join(" ");
         $("#portfolio").append("<div class='project-container " + classes + "'><a href='" + item.link
-            + "' target='_blank'><div class='project'><img src='" + item.image
-            + "' alt='" + item.name + "'><h3>" +item.name + "</h3></div></a></div>");
+            + "' target='_blank'><div class='project'><div class='img-container'><img src='" + item.image
+            + "' alt='" + item.name + "'></div><h3>" + item.name + "</h3></div></a></div>");
     });
 }
 

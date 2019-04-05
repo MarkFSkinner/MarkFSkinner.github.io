@@ -245,9 +245,20 @@ h3 {
     min-height: $project-height;
 }
 
-.project img {
+/*.project img {
     width: 90%;
     padding-top: 0.625rem; //10px
+}*/
+
+.img-container {
+    width: 90%;
+    height: 50%;
+    padding-top: 0.625rem; //10px
+    margin: auto;
+}
+
+.img-container img {
+    width: 100%;
 }
 
 #email {
