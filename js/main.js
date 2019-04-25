@@ -10,15 +10,15 @@ class Project {
 const projects = [
     new Project("Weather App", "https://weather-app-39e37.firebaseapp.com/", "images/weather-app.png", ["apps", "react"]),
     new Project("Markdown Previewer", "https://markdown-previewer-23554.firebaseapp.com/", "images/markdown-previewer.png", ["apps", "react"]),
+    new Project("Frogger", "https://markfskinner.github.io/costanza-frogger-game/", "images/frogger.png", ["apps"]),
     new Project("Drum Machine", "#", "images/coming-soon.jpg", ["apps", "react"]),
     new Project("Random Quote Generator", "#", "images/coming-soon.jpg", ["apps"]),
     new Project("Calculator", "#", "images/coming-soon.jpg", ["apps"]),
-    new Project("Pomodoro Clock", "#", "images/coming-soon.jpg", ["apps", "react"]),
-    new Project("Wikipedia Searcher", "#", "images/coming-soon.jpg", ["apps"]),
-    new Project("Product Landing Page", "https://markfskinner.github.io/product-landing-page/#models", "images/product-landing-page.png", ["sites"]),
-    new Project("Technical Documentation Page", "#", "images/coming-soon.jpg", ["sites"]),
-    new Project("Tic Tac Toe", "#", "images/coming-soon.jpg", ["apps"]),
-    new Project("Frogger", "#", "images/coming-soon.jpg", ["apps"])
+    new Project("Pomodoro Clock", "https://pomodoro-clock-4efc4.firebaseapp.com/", "images/pomodoro-clock.png", ["apps", "react"]),
+    new Project("Wikipedia Viewer", "https://markfskinner.github.io/wikipedia-viewer/", "images/wikipedia-viewer.png", ["apps"]),
+    new Project("Product Landing Page", "https://markfskinner.github.io/product-landing-page/", "images/product-landing-page.png", ["sites"]),
+    new Project("Technical Documentation Page", "https://markfskinner.github.io/technical-documentation-page/", "images/technical-documentation-page.png", ["sites"]),
+    new Project("Tic Tac Toe", "#", "images/coming-soon.jpg", ["apps"])
 ];
 
 function addProjects(arr) {
@@ -151,4 +151,4 @@ $(function() {
     setActiveClickLink("category");
     closeMenuOnClick();
     filterProjects();
-})
+});
