@@ -9,16 +9,16 @@ class Project {
 
 const projects = [
     new Project("Weather App", "https://weather-app-39e37.firebaseapp.com/", "images/weather-app.png", ["apps", "react"]),
-    new Project("Markdown Previewer", "https://markdown-previewer-23554.firebaseapp.com/", "images/markdown-previewer.png", ["apps", "react"]),
-    new Project("Frogger", "https://markfskinner.github.io/costanza-frogger-game/", "images/frogger.png", ["apps"]),
     new Project("Drum Machine", "https://drum-machine-5bfd0.firebaseapp.com/", "images/drum-machine.png", ["apps", "react"]),
-    new Project("Random Quote Machine", "https://markfskinner.github.io/random-quote-machine/", "images/random-quote-machine.png", ["apps"]),
-    new Project("Calculator", "#", "images/coming-soon.jpg", ["apps"]),
+    new Project("Frogger", "https://markfskinner.github.io/costanza-frogger-game/", "images/frogger.png", ["apps"]),
+    new Project("Tic Tac Toe", "https://tic-tac-toe-cd139.firebaseapp.com/", "images/tic-tac-toe.png", ["apps", "react"]),
+    new Project("Calculator", "https://calculator-2aef9.web.app/", "images/calculator.png", ["apps", "react"]),
     new Project("Pomodoro Clock", "https://pomodoro-clock-4efc4.firebaseapp.com/", "images/pomodoro-clock.png", ["apps", "react"]),
+    new Project("Markdown Previewer", "https://markdown-previewer-23554.firebaseapp.com/", "images/markdown-previewer.png", ["apps", "react"]),
+    new Project("Random Quote Machine", "https://markfskinner.github.io/random-quote-machine/", "images/random-quote-machine.png", ["apps"]),
     new Project("Wikipedia Viewer", "https://markfskinner.github.io/wikipedia-viewer/", "images/wikipedia-viewer.png", ["apps"]),
     new Project("Product Landing Page", "https://markfskinner.github.io/product-landing-page/", "images/product-landing-page.png", ["sites"]),
-    new Project("Technical Documentation Page", "https://markfskinner.github.io/technical-documentation-page/", "images/technical-documentation-page.png", ["sites"]),
-    new Project("Tic Tac Toe", "#", "images/coming-soon.jpg", ["apps"])
+    new Project("Technical Documentation Page", "https://markfskinner.github.io/technical-documentation-page/", "images/technical-documentation-page.png", ["sites"])
 ];
 
 function addProjects(arr) {
