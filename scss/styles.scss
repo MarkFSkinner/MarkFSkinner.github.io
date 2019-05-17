@@ -5,6 +5,7 @@ $accent-color: #E37222;
 $nav-height: 4rem;
 $project-height: 15rem;
 $plain-text-color: #3a4145;
+$off-white: hsl(0, 0%, 95%);
 
 body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -13,7 +14,6 @@ body {
     margin: 0;
     color: $plain-text-color;
 }
-
 
 #container {
     width: 100%;
@@ -43,6 +43,18 @@ body {
     letter-spacing: 0.125rem;
 }
 
+#icon {
+    display: none;
+    float: right;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+#icon i {
+    color: $off-white;
+}
+
 #nav-bar {
     display: flex;
     flex-direction: row;
@@ -50,12 +62,13 @@ body {
     align-items: center;
     width: 70%;
     height: $nav-height;
-    transition: height 0.5s;
     float: right;
+    overflow: hidden;
+    transition: all 0s;
 }
 
 .nav-link {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     text-decoration: none;
     text-align: right;
     margin-left: 1.5rem;
@@ -68,7 +81,7 @@ body {
 }
 
 .logo-link, .logo-link:visited, .nav-link, .nav-link:visited {
-    color: white;
+    color: $off-white;
 }
 
 .active, .active:visited {
@@ -85,12 +98,6 @@ a, a:visited {
 
 .hidden {
     display: none;
-}
-
-.top-nav .icon {
-    display: none;
-    font-size: 2.5rem;
-    color: white;
 }
 
 #main {
@@ -199,7 +206,7 @@ h3 {
 }
 
 .project-container:hover a{
-    color: white;
+    color: $off-white;
 }
 
 .project {
@@ -231,7 +238,7 @@ h3 {
 .btn {
     background-color: $secondary-color;
     border: none;
-    color: white;
+    color: $off-white;
     padding: 0.9375rem 1rem;
     text-decoration: none;
     font-size: 0.75rem;
@@ -318,14 +325,13 @@ i {
 }
 
 @media screen and (max-width: 823px) {
-    .top-nav a {
-        display: none;
-        padding-right: 1.875rem;
+    #icon {
+        display: inline-block;
     }
 
-    .top-nav a.icon {
+    .top-nav a {
         display: block;
-        float: right;
+        padding-right: 1.875rem;
     }
 
     .nav-link {
@@ -333,27 +339,24 @@ i {
         margin: 0.625rem 0.3125rem 0.625rem 0.3125rem;
         padding: 0.3125rem 1.25rem 0.3125rem;
         font-size: 1.25rem;
+        margin-top: -20rem;
     }
 
     #logo {
-        width: 50%;
+        width: 75%;
     }
 
     #nav-bar {
-        width: 50%;
-    }
-
-    .top-nav.responsive .icon {
-        position: absolute;
-        right: 0.125rem;
-        color: white;
+        width: 100%;
+        margin-top: -4.5rem;
+        transition: all 0.3s ease-in-out 0s;
     }
 
     .top-nav.responsive a {
-        display: block;
         float: none;
         text-align: right;
-        color: white;
+        color: $off-white;
+        margin-top: 0rem;
     }
 
     .top-nav.responsive a:hover {
@@ -363,6 +366,6 @@ i {
     #nav-bar.responsive {
         display: inline-block;
         background-color: $secondary-color;
-        height: 75rem;
+        height: 21rem;
     }
 }

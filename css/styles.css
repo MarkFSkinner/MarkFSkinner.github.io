@@ -29,6 +29,16 @@ body {
   line-height: 4rem;
   letter-spacing: 0.125rem; }
 
+#icon {
+  display: none;
+  float: right;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem; }
+
+#icon i {
+  color: #f2f2f2; }
+
 #nav-bar {
   display: flex;
   flex-direction: row;
@@ -36,11 +46,12 @@ body {
   align-items: center;
   width: 70%;
   height: 4rem;
-  transition: height 0.5s;
-  float: right; }
+  float: right;
+  overflow: hidden;
+  transition: all 0s; }
 
 .nav-link {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   text-decoration: none;
   text-align: right;
   margin-left: 1.5rem;
@@ -51,7 +62,7 @@ body {
   color: #EEAA7B; }
 
 .logo-link, .logo-link:visited, .nav-link, .nav-link:visited {
-  color: white; }
+  color: #f2f2f2; }
 
 .active, .active:visited {
   color: #EEAA7B; }
@@ -64,11 +75,6 @@ a, a:visited {
 
 .hidden {
   display: none; }
-
-.top-nav .icon {
-  display: none;
-  font-size: 2.5rem;
-  color: white; }
 
 #main {
   text-align: center;
@@ -156,7 +162,7 @@ h3 {
   text-decoration: none; }
 
 .project-container:hover a {
-  color: white; }
+  color: #f2f2f2; }
 
 .project {
   height: 100%;
@@ -183,7 +189,7 @@ h3 {
 .btn {
   background-color: #66B9BF;
   border: none;
-  color: white;
+  color: #f2f2f2;
   padding: 0.9375rem 1rem;
   text-decoration: none;
   font-size: 0.75rem;
@@ -256,36 +262,33 @@ i {
     padding: 0.9375rem 2rem;
     font-size: 1rem; } }
 @media screen and (max-width: 823px) {
-  .top-nav a {
-    display: none;
-    padding-right: 1.875rem; }
+  #icon {
+    display: inline-block; }
 
-  .top-nav a.icon {
+  .top-nav a {
     display: block;
-    float: right; }
+    padding-right: 1.875rem; }
 
   .nav-link {
     float: left;
     margin: 0.625rem 0.3125rem 0.625rem 0.3125rem;
     padding: 0.3125rem 1.25rem 0.3125rem;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    margin-top: -20rem; }
 
   #logo {
-    width: 50%; }
+    width: 75%; }
 
   #nav-bar {
-    width: 50%; }
-
-  .top-nav.responsive .icon {
-    position: absolute;
-    right: 0.125rem;
-    color: white; }
+    width: 100%;
+    margin-top: -4.5rem;
+    transition: all 0.3s ease-in-out 0s; }
 
   .top-nav.responsive a {
-    display: block;
     float: none;
     text-align: right;
-    color: white; }
+    color: #f2f2f2;
+    margin-top: 0rem; }
 
   .top-nav.responsive a:hover {
     color: #E37222; }
@@ -293,6 +296,6 @@ i {
   #nav-bar.responsive {
     display: inline-block;
     background-color: #66B9BF;
-    height: 75rem; } }
+    height: 21rem; } }
 
 /*# sourceMappingURL=styles.css.map */
