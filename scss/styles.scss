@@ -173,6 +173,15 @@ h3 {
     color: $accent-color;
 }
 
+#info a {
+    text-decoration: none;
+    color: $accent-color;
+}
+
+#info a:hover {
+    text-decoration: underline;
+}
+
 #portfolio {
     background-color: #f5f8fa;
 }

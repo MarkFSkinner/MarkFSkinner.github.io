@@ -135,6 +135,13 @@ h3 {
 .highlight {
   color: #E37222; }
 
+#info a {
+  text-decoration: none;
+  color: #E37222; }
+
+#info a:hover {
+  text-decoration: underline; }
+
 #portfolio {
   background-color: #f5f8fa; }
 
