@@ -43,6 +43,10 @@ body {
     letter-spacing: 0.125rem;
 }
 
+#logo a:hover {
+    color: $complementary-color;
+}
+
 #icon {
     display: none;
     float: right;
@@ -314,6 +318,10 @@ h3 {
 #footer a {
     margin-right: 0.9375rem;
     margin-left: 0.9375rem;
+}
+
+#footer i:hover {
+    color: $complementary-color;
 }
 
 i {

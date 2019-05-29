@@ -29,6 +29,9 @@ body {
   line-height: 4rem;
   letter-spacing: 0.125rem; }
 
+#logo a:hover {
+  color: #EEAA7B; }
+
 #icon {
   display: none;
   float: right;
@@ -255,6 +258,9 @@ h3 {
 #footer a {
   margin-right: 0.9375rem;
   margin-left: 0.9375rem; }
+
+#footer i:hover {
+  color: #EEAA7B; }
 
 i {
   font-size: 2rem; }
